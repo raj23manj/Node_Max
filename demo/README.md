@@ -2,6 +2,8 @@
 
 * REPL(read, eval, print, loop) it is like irb
 
+* node app.js to run
+
 * Node Core Modules(some common)
   * http => Launch a server, send requests
   * https => Launch a SSL Server
