@@ -11,7 +11,6 @@ const requestHandler = (req, res) => {
         res.write('<body><form action="/message" method="POST"><input type="text" name="message"><button type="submit">Send</button></form></body>');
         res.write('</html>');
         return res.end();
-        return res.end();
     }
 
     if (url === '/message' && method === 'POST') {
@@ -21,7 +20,6 @@ const requestHandler = (req, res) => {
             console.log(chunk);
             body.push(chunk);
         });
-
         return req.on('end', () => { // without return here thrws error
             console.log('parsed chunk');
             const parsedBody = Buffer.concat(body).toString(); // buffer bus
